@@ -4,9 +4,10 @@ import patch from "./mysnabbdom/patch"
 let newVnode1 = h('ul',
   {},
   [
-    h("li", {}, "11111"),
-    h("li", {}, "22222"),
-    h("li", {}, "33333"),
+    h("li", {key: "A"}, "A"),
+    h("li", {key: "B"}, "B"),
+    h("li", {key: "C"}, "C"),
+    h("li", {key: "D"}, "D"),
   ],
   // "我是一个没有children的家伙"
 )
@@ -14,9 +15,10 @@ let newVnode1 = h('ul',
 let newVnode2 = h('ul',
   {},
   [
-    h("li", {}, "99999"),
-    h("li", {}, "88888"),
-    h("li", {}, "77777"),
+    h("li", {key: "D"}, "D"),
+    h("li", {key: "C"}, "C"),
+    h("li", {key: "B"}, "B"),
+    h("li", {key: "A"}, "A"),
   ]
 )
 
@@ -24,7 +26,6 @@ const container = document.getElementById('container')
 
 const btn = document.getElementById('btn')
 const btn2 = document.getElementById('btn2')
-
 
 window.onload = function () {
 
