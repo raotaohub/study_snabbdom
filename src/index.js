@@ -8,6 +8,8 @@ let newVnode1 = h('ul',
     h("li", {key: "B"}, "B"),
     h("li", {key: "C"}, "C"),
     h("li", {key: "D"}, "D"),
+    h("li", {key: "E"}, "E"),
+
   ],
   // "我是一个没有children的家伙"
 )
@@ -15,10 +17,12 @@ let newVnode1 = h('ul',
 let newVnode2 = h('ul',
   {},
   [
-    h("li", {key: "D"}, "D"),
-    h("li", {key: "C"}, "C"),
-    h("li", {key: "B"}, "B"),
+    h("li", {key: "F"}, "F"),
+    h("li", {key: "E"}, "E"),
     h("li", {key: "A"}, "A"),
+    h("li", {key: "B"}, "B"),
+    h("li", {key: "C"}, "C"),
+    h("li", {key: "D"}, "D"),
   ]
 )
 
@@ -33,7 +37,7 @@ window.onload = function () {
   patch(container, newVnode1)
 
   btn.onclick = function () {
-
+    patch(newVnode2, newVnode1)
   }
   btn2.onclick = function () {
     patch(newVnode1, newVnode2)

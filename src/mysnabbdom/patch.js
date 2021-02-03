@@ -62,12 +62,13 @@ function patchVnode(oldVnode, newVnode) {
     if (oldVnode.text !== newVnode.text) {
       elm.innerText = newVnode.text
       oldVnode.children = undefined
-    }
-  } else {
+    } //.. 如果内容都一样什么都不做
 
+  } else {
+    // 如果new没有text属性就说明有children属性
     if (oldCh !== undefined && oldCh.length > 0 && newCh.length > 0) {
       /**
-       *★新老节点都有children节点★
+       *★新老节点都有children节点★ 而且不相同 那么就要进行深度diff了
        */
       if (newCh !== oldCh) {
         console.log('updateChildren')
@@ -79,7 +80,6 @@ function patchVnode(oldVnode, newVnode) {
        * 1、把old.text清空
        * 2、把new.children插入到DOM
        */
-
       oldVnode.elm.innerText = ""
       let i = 0, len = newCh.length, c;
       for (i; i < len; i++) {
