@@ -19,13 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="549af67b-dd35-4e4a-82bc-abfc7a9f1a14" name="默认的" comment="完成updateChildren4种命中方式。&#10;1. 新前和旧前：调用patchVnode 指针：后移&#10;2. 新后和旧后：调用patchVnode 指针：迁移&#10;3. 新后和旧前：调用patchVnode 移动旧前节点到旧后节点的下一个， 指针：后者前移，前者后移&#10;4. 新前和旧后：调用patchVnode 移动旧后节点到旧前节点的前面， 指针：后者前移，前者后移">
+    <list default="true" id="549af67b-dd35-4e4a-82bc-abfc7a9f1a14" name="默认的" comment="完成updateChildren方法 4种命中方式之外的的方法，diff核心算法。">
+      <change afterPath="$PROJECT_DIR$/src/index-自己写.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/snabbdom/build/package/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/snabbdom/build/package/init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/snabbdom/src/package/init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/snabbdom/src/package/init.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index-体验dif算法.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysnabbdom/patch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/patch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mysnabbdom/updateChildren.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/updateChildren.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunManager">
     <configuration name="localhost:8080" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/">
@@ -75,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612163147666</updated>
       <workItem from="1612163148763" duration="2461000" />
-      <workItem from="1612265963153" duration="33556000" />
+      <workItem from="1612265963153" duration="51777000" />
     </task>
     <task id="LOCAL-00001" summary="完成updateChildren4种命中方式。&#10;1. 新前和旧前：调用patchVnode 指针：后移&#10;2. 新后和旧后：调用patchVnode 指针：迁移&#10;3. 新后和旧前：调用patchVnode 移动旧前节点到旧后节点的下一个， 指针：后者前移，前者后移&#10;4. 新前和旧后：调用patchVnode 移动旧后节点到旧前节点的前面， 指针：后者前移，前者后移">
       <created>1612289530194</created>
@@ -84,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612289530194</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成updateChildren方法 4种命中方式之外的的方法，diff核心算法。">
+      <created>1612373453942</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612373453942</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +114,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成updateChildren4种命中方式。&#10;1. 新前和旧前：调用patchVnode 指针：后移&#10;2. 新后和旧后：调用patchVnode 指针：迁移&#10;3. 新后和旧前：调用patchVnode 移动旧前节点到旧后节点的下一个， 指针：后者前移，前者后移&#10;4. 新前和旧后：调用patchVnode 移动旧后节点到旧前节点的前面， 指针：后者前移，前者后移" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成updateChildren4种命中方式。&#10;1. 新前和旧前：调用patchVnode 指针：后移&#10;2. 新后和旧后：调用patchVnode 指针：迁移&#10;3. 新后和旧前：调用patchVnode 移动旧前节点到旧后节点的下一个， 指针：后者前移，前者后移&#10;4. 新前和旧后：调用patchVnode 移动旧后节点到旧前节点的前面， 指针：后者前移，前者后移" />
+    <MESSAGE value="完成updateChildren方法 4种命中方式之外的的方法，diff核心算法。" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成updateChildren方法 4种命中方式之外的的方法，diff核心算法。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="854" y="189" key="#检查" timestamp="1612164903204">
@@ -158,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1894" height="330" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612165619969" />
-    <state x="589" y="189" key="Vcs.Push.Dialog.v2" timestamp="1612289537376">
+    <state x="589" y="189" key="Vcs.Push.Dialog.v2" timestamp="1612373499165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="589" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612289537376" />
+    <state x="589" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1612373499165" />
     <state x="811" y="5" width="840" height="174" key="search.everywhere.popup" timestamp="1612165351953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

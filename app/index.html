@@ -5,19 +5,48 @@
     <meta charset="UTF-8">
     <title>snabbdom</title>
 </head>
+<style>
+    #container {
+        border: 2px solid darkcyan;
+        background-color: cadetblue;
+        width: 700px;
+    }
+
+    #sonsyuanwen {
+        position: absolute;
+        top: 300px;
+    }
+</style>
 
 <body>
-    <button id="btn">按钮</button>
-    <button id="btn2">按钮-new有text，替换old</button>
-    <div id="container">
-        <ul>
-            <li>一、</li>
-            <li>二、</li>
-            <li>三、</li>
-            <li>四、</li>
-        </ul>
+<div>开局先定义一个container</div>
+<button id="btn">按钮1--patch(newVnode2, newVnode1)</button>
+<button id="btn2">按钮2--patch(newVnode1, newVnode2)</button>
+<div id="container">
+    <ul>
+        <li>明月几时有？把酒问青天。</li>
+        <li>不知天上宫阙，今夕是何年。</li>
+        <li>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。</li>
+        <li>转朱阁，低绮户，照无眠。</li>
+        <li>不应有恨，何事长向别时圆？</li>
+        <li>人有悲欢离合，月有阴晴圆缺，此事古难全。</li>
+        <li>但愿人长久，千里共婵娟。</li>
+    </ul>
+</div>
+<div>
+    <div class="sons" id="sonsyuanwen">
+        <div class="cont">
+            <div class="yizhu">
+            </div>
+            <h1 style="font-size:20px; line-height:22px; height:22px; margin-bottom:10px;">鹿柴</h1>
+            <p class="source">王维 〔唐代〕</p>
+            <div class="contson" id="contsone9b1a8b4def0">
+                空山不见人，但闻人语响。<br>返景入深林，复照青苔上。
+            </div>
+        </div>
     </div>
-    <script src="/xuni/bundle.js"></script>
+</div>
+<script src="/xuni/bundle.js"></script>
 </body>
 
 </html>
